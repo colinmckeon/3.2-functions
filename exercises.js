@@ -183,9 +183,20 @@ var output = findLongestWord(['peanut', 'mint', 'spinach', 'pringles']);
 // Write a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
 // ---------------------
 
+function filterLongWords(words, i){
+  "use strict";
+  var longWords = [];
 
+  for(var i=0; i<words.length; i++){
 
+    if(words[i].length > i){
+      longWords.push(words[i]);
+    }
+  }
+  return longWords;
+}
 
+console.log(filterLongWords(['peanut', 'mint', 'spinach', 'pringles'],4));
 
 
 
@@ -197,15 +208,15 @@ var output = findLongestWord(['peanut', 'mint', 'spinach', 'pringles']);
 
 /* with help from http://stackoverflow.com/a/6521513*/
 
-function filterLongWords(words, i){
-    "use strict";
-
-    var longWords = words.filter(function(str) { return str.length > i; });
-
-    return longWords;
-}
-
-var output = filterLongWords(['peanut', 'mint', 'spinach', 'pringles'],5);
+// function filterLongWords(words, i){
+//     "use strict";
+//
+//     var longWords = words.filter(function(str) { return str.length > i; });
+//
+//     return longWords;
+// }
+//
+// var output = filterLongWords(['peanut', 'mint', 'spinach', 'pringles'],5);
 
 // console.log(filterLongWords(['peanut', 'mint', 'spinach', 'pringles'],5));
 // console.assert(output === (['peanut', 'spinach', 'pringles']));
