@@ -38,7 +38,7 @@ var input3 = 10;
 function maxOfThree(num1, num2, num3){
     "use strict";
 
-    var maxNum =  Math.max(num1, num2);
+    var maxNum =  Math.max(num1, num2, num3);
 
     return maxNum;
 }
@@ -64,7 +64,8 @@ function isVowel(char){
       if(char === vowels[i]){
         return true;
       }
-    } return false;
+    }
+    return false;
 }
 
 // console.log(isVowel);
@@ -177,9 +178,22 @@ var output = findLongestWord(['peanut', 'mint', 'spinach', 'pringles']);
 
 
 
+
 // ---------------------
 // Write a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
 // ---------------------
+
+
+
+
+
+
+
+
+
+ // FIRST SUBMIT BELOW, NEW WORK ABOVE*****************************************
+ //****************************************************************************
+ //****************************************************************************
 
 /* with help from http://stackoverflow.com/a/6521513*/
 
@@ -207,10 +221,11 @@ function charFreq(string){
     "use strict";
       var freq = {};
 
-        for (var i=0; i<string.length;i++) {
-        var character = string.charAt(i);
+        for (var i=0; i < string.length; i++) {
+        var character = string[i];
             if (freq[character]) {
-               freq[character]++;
+              //  freq[character]++;
+               freq[character] = freq[character] + 1
             } else {
                freq[character] = 1;
             }
@@ -223,4 +238,4 @@ function charFreq(string){
 var end = charFreq ('abbabcbdbabdbdbabababcbcbab');
 
 console.log(charFreq ('abbabcbdbabdbdbabababcbcbab'));
-console.assert(end === {a: 7, b: 14, c: 3, d: 3})
+console.assert(end == {'a': 7, 'b': 14, 'c': 3, 'd': 3})
