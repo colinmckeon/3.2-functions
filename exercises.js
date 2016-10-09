@@ -163,6 +163,28 @@ var output = reverse("rugby")
 // ---------------------
 // Write a function findLongestWord() that takes an array of words and returns the length of the longest one.
 // ---------------------
+function findLongestWord(words){
+    "use strict";
+
+    var longest = 0;
+    for(var i=0; i < words.length; i++){
+      if(words[i].length > longest){
+        longest = words[i].length;
+      }
+    }
+      return longest;
+  }
+
+  // console.log(findLongestWord(['peanut', 'mint', 'spinach', 'pringles']));
+  // console.assert(findLongestWord(['peanut', 'mint', 'spinach', 'pringles']) === 'pringles');
+
+
+
+
+
+// FIRST SUBMIT BELOW, NEW WORK ABOVE*****************************************
+//****************************************************************************
+//****************************************************************************
 
 function findLongestWord(words){
     "use strict";
